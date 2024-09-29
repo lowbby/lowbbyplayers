@@ -1,1 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lowwby - Conecta y Juega</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="logo">
+                <img src="images/logo.png" alt="Lowwby Logo">
+            </div>
+        </div>
+        <div class="navbar-center">
+            <ul>
+                <li><a href="#" class="active-link">Inicio</a></li>
+                <li><a href="#">Equipos</a></li>
+                <li><a href="#">Jugadores</a></li>
+                <li><a href="#">Ligas</a></li>
+                <li><a href="#">Noticias</a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <div class="search-box">
+                <input type="text" placeholder="Buscar...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="nav-profile">
+                <img src="images/profile.jpg" alt="Perfil" class="nav-profile-img" onclick="toggleMenu()">
+                <div id="profileMenu" class="profile-menu-wrap">
+                    <div class="profile-menu">
+                        <a href="#" class="profile-menu-link"><img src="images/settings-icon.png" alt="Configuración">Configuración</a>
+                        <a href="#" class="profile-menu-link"><img src="images/logout-icon.png" alt="Cerrar Sesión">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <aside class="left-sidebar">
+            <div class="sidebar-profile-box">
+                <div class="sidebar-profile-info">
+                    <img src="images/profile.jpg" alt="Usuario" class="sidebar-profile-img">
+                    <h3>Juan Pérez</h3>
+                    <p>Delantero</p>
+                </div>
+                <div class="sidebar-activity">
+                    <h3>Actividad Reciente</h3>
+                    <ul>
+                        <li>Juan ha subido un nuevo video.</li>
+                        <li>Juan ha completado su perfil.</li>
+                        <li>Juan ha sido recomendado por un entrenador.</li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="create-post">
+                <h2>Crea una nueva publicación</h2>
+                <div class="create-post-input">
+                    <textarea rows="4" placeholder="¿Qué estás pensando?"></textarea>
+                    <button>Publicar</button>
+                </div>
+                <div class="create-post-links">
+                    <a href="#">Añadir imagen</a>
+                    <a href="#">Añadir video</a>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-author">
+                    <img src="images/user-1.png" alt="Usuario 1">
+                    <div>
+                        <h4>Usuario 1</h4>
+                        <p>Hace 2 horas</p>
+                    </div>
+                </div>
+                <p>¡Hola, equipo! Estoy emocionado por el próximo partido. ¡Vamos a ganar!</p>
+                <div class="post-stats">
+                    <span>32 Me gusta</span>
+                    <span>12 Comentarios</span>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-author">
+                    <img src="images/user-2.png" alt="Usuario 2">
+                    <div>
+                        <h4>Usuario 2</h4>
+                        <p>Hace 1 día</p>
+                    </div>
+                </div>
+                <p>He subido un nuevo video de mis mejores goles. ¡Revisen mi perfil!</p>
+                <div class="post-stats">
+                    <span>50 Me gusta</span>
+                    <span>20 Comentarios</span>
+                </div>
+            </div>
+        </main>
+
+        <aside class="right-sidebar">
+            <div class="sidebar-recommendations">
+                <h3>Recomendaciones</h3>
+                <a href="#"><img src="images/user-3.png" alt="Usuario 3"> Usuario 3</a>
+                <a href="#"><img src="images/user-4.png" alt="Usuario 4"> Usuario 4</a>
+                <a href="#"><img src="images/user-5.png" alt="Usuario 5"> Usuario 5</a>
+                <a href="#" class="see-all-link">Ver Todos</a>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Acerca de</a>
+                <a href="#">Ayuda</a>
+                <a href="#">Privacidad</a>
+                <a href="#">Condiciones</a>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2024 Lowwby. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('profileMenu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+
+        function toggleActivity() {
+            const activity = document.getElementById('sidebarActivity');
+            activity.style.display = (activity.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+
+</html>
 
